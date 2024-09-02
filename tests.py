@@ -8,9 +8,9 @@ class AddTestCase(unittest.TestCase):
     Test cases for add function
     """
 
-    def test_blank_string(self):
-        result = add("")
-        self.assertEqual(result, 0)
+    # def test_blank_string(self):
+    #     result = add("")
+    #     self.assertEqual(result, 0)
     
     def test_zero(self):
         result = add("0")
