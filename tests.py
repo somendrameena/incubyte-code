@@ -19,3 +19,15 @@ class AddTestCase(unittest.TestCase):
     def test_zeroes(self):
         result = add("0,0,0")
         self.assertEqual(result, 0)
+    
+    def test_nums_1(self):
+        result = add("0,1,2")
+        self.assertEqual(result, 3)
+    
+    def test_nums_2(self):
+        result = add("1,2,3,4")
+        self.assertEqual(result, 10)
+    
+    def test_nums_3(self):
+        result = add("3,14,7,42,71")
+        self.assertEqual(result, 137)
