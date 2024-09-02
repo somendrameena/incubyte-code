@@ -2,10 +2,16 @@ def add(numbers: str = "") -> int:
 
     if numbers == "":
         return 0
+
+    delimiter = ","
     
-    numbers = numbers.replace("\n", ",")
+    if numbers.startswith("//"):
+        delimiter = numbers[2]
+        numbers = numbers[4:]
     
-    int_nums = [int(num) for num in numbers.split(",")]
+    numbers = numbers.replace("\n", delimiter)
+    
+    int_nums = [int(num) for num in numbers.split(delimiter)]
 
     negative_nums = [num for num in int_nums if num < 0]
     if len(negative_nums) > 0:

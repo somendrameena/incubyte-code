@@ -46,3 +46,7 @@ class AddTestCase(unittest.TestCase):
     def test_new_line(self):
         result = add("1\n2,3")
         self.assertEqual(result, 6)
+    
+    def test_new_delimiter(self):
+        result = add("//;\n1;2\n3")
+        self.assertEqual(result, 6)
