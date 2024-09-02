@@ -3,15 +3,15 @@ def add(numbers: str = "") -> int:
     if numbers == "":
         return 0
     
-    splitted_str = numbers.strip().split(",")
+    int_nums = [int(num) for num in numbers.split(",")]
+
+    negative_nums = [num for num in int_nums if num < 0]
+    if len(negative_nums) > 0:
+        raise Exception("negative numbers not allowed")
 
     count = 0
 
-    for num in splitted_str:
-        num_int = int(num)
-        if num_int < 0:
-            raise Exception("negative numbers not allowed")
-
-        count += num_int
+    for num in int_nums:
+        count += num
 
     return count
