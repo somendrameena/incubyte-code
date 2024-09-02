@@ -31,3 +31,11 @@ class AddTestCase(unittest.TestCase):
     def test_nums_3(self):
         result = add("3,14,7,42,71")
         self.assertEqual(result, 137)
+    
+    def test_large_nums_1(self):
+        result = add("221,446,163,94")
+        self.assertEqual(result, 924)
+    
+    def test_large_nums_2(self):
+        result = add("3134,495,99412,9834")
+        self.assertEqual(result, 112875)
