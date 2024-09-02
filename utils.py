@@ -6,6 +6,9 @@ def add(numbers: str = "") -> int:
 
     # Set default delimiter
     delimiter = ","
+
+    # Replace \\n (if received) with new line character
+    numbers = numbers.replace("\\n", "\n")
     
     # Find delimiter from string
     if numbers.startswith("//"):
