@@ -7,7 +7,8 @@ def add(numbers: str = "") -> int:
 
     negative_nums = [num for num in int_nums if num < 0]
     if len(negative_nums) > 0:
-        raise Exception("negative numbers not allowed")
+        error_nums = ",".join(map(str, negative_nums))
+        raise Exception("negative numbers not allowed {}".format(error_nums))
 
     sum = 0
 
