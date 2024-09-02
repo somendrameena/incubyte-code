@@ -42,3 +42,7 @@ class AddTestCase(unittest.TestCase):
     
     def test_negative_nums(self):
         self.assertRaises(Exception, add, "21,55,-22,45")
+    
+    def test_new_line(self):
+        result = add("1\n2,3")
+        self.assertEqual(result, 6)

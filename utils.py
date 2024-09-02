@@ -3,6 +3,8 @@ def add(numbers: str = "") -> int:
     if numbers == "":
         return 0
     
+    numbers = numbers.replace("\n", ",")
+    
     int_nums = [int(num) for num in numbers.split(",")]
 
     negative_nums = [num for num in int_nums if num < 0]
