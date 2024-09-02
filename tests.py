@@ -39,3 +39,6 @@ class AddTestCase(unittest.TestCase):
     def test_large_nums_2(self):
         result = add("3134,495,99412,9834")
         self.assertEqual(result, 112875)
+    
+    def test_negative_nums(self):
+        self.assertRaises(Exception, add, "21,55,-22,45")

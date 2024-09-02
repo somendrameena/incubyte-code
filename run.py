@@ -1,4 +1,5 @@
 from utils import add
 
 s = input("Enter comma-separated numbers: ")
-add(s)
+result = add(s)
+print("Result:", result)

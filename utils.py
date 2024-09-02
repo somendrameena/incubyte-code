@@ -9,6 +9,9 @@ def add(numbers: str = "") -> int:
 
     for num in splitted_str:
         num_int = int(num)
+        if num_int < 0:
+            raise Exception("negative numbers not allowed")
+
         count += num_int
 
     return count
