@@ -9,9 +9,9 @@ def add(numbers: str = "") -> int:
     if len(negative_nums) > 0:
         raise Exception("negative numbers not allowed")
 
-    count = 0
+    sum = 0
 
     for num in int_nums:
-        count += num
+        sum += num
 
-    return count
+    return sum
