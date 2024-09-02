@@ -1,4 +1,7 @@
 def add(numbers: str = "") -> int:
+
+    if numbers == "":
+        return 0
     
     splitted_str = numbers.strip().split(",")
 
